@@ -1,11 +1,14 @@
 {
   "name": "react-from-scratch",
   "version": "1.0.0",
+  "homepage": "https://JackTran791.github.io/react-from-scratch",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js"
+    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "babel": {
@@ -17,10 +20,11 @@
     "plugins": [
       "transform-object-rest-spread"
     ]
-},
+  },
   "author": "Jack Tran",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
